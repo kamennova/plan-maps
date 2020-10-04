@@ -1,0 +1,34 @@
+{
+  "defaultSeverity": "error",
+  "extends": [
+    "tslint:recommended",
+    "tslint-config-google",
+    "tslint-eslint-rules",
+    "tslint-sonarts"
+  ],
+  "jsRules": {},
+  "rules": {
+    "quotemark": [
+      false
+    ],
+    "interface-over-type-literal": false,
+    "interface-name": [
+      true,
+      "never-prefix"
+    ],
+    "member-ordering": [
+      true,
+      {
+        "order": [
+          "static-field",
+          "instance-field",
+          "constructor",
+          "static-method",
+          "instance-method"
+        ]
+      }
+    ],
+    "object-literal-sort-keys": false
+  },
+  "rulesDirectory": []
+}

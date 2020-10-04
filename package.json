@@ -1,0 +1,18 @@
+{
+  "name": "flowcharts",
+  "version": "1.0.0",
+  "dependencies": {
+    "@types/jest": "^24.0.20",
+    "tslint": "^5.20.0",
+    "tslint-config-google": "^1.0.1",
+    "tslint-eslint-rules": "^5.4.0",
+    "tslint-sonarts": "^1.9.0",
+    "typescript": "^3.6.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "cd backend && npm test && cd ../frontend && npm test",
+    "tslint": "tslint -p 'tsconfig.json' -c 'tslint.json'",
+    "tslintfix": "tslint -p 'tsconfig.json' -c 'tslintautofix.json' --fix"
+  }
+}

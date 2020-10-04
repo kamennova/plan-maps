@@ -1,0 +1,34 @@
+import {
+    ADD_NODE,
+    UPDATE_TASK_STATE_FOR_NODE,
+    DELETE_CHART,
+    UPDATE_GOAL,
+    REVOKE_ACCESS,
+    GRANT_ACCESS,
+    SET_BACKGROUND,
+    SET_PROFILE_PICTURE
+} from './actions';
+
+export type SyncableActionType = 'DELETE_CHART'
+    | 'ADD_NODE'
+    | 'UPDATE_TASK_STATE_FOR_NODE'
+    | 'UPDATE_GOAL'
+    | 'REVOKE_ACCESS'
+    | 'GRANT_ACCESS'
+    | 'SET_BACKGROUND'
+    | 'SET_PROFILE_PICTURE';
+
+export const SYNCABLE_ACTIONS: SyncableActionType[] = [
+    DELETE_CHART,
+
+    ADD_NODE,
+    UPDATE_TASK_STATE_FOR_NODE,
+    UPDATE_GOAL,
+
+    REVOKE_ACCESS,
+    GRANT_ACCESS,
+
+    SET_BACKGROUND,
+
+    SET_PROFILE_PICTURE
+];

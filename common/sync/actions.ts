@@ -1,0 +1,14 @@
+export const DELETE_CHART = 'DELETE_CHART';
+
+export const ADD_NODE = 'ADD_NODE';
+export const UPDATE_NODE = 'UPDATE_NODE';
+export const DELETE_NODE = 'DELETE_NODE';
+export const UPDATE_TASK_STATE_FOR_NODE = 'UPDATE_TASK_STATE_FOR_NODE';
+export const UPDATE_GOAL = 'UPDATE_GOAL';
+
+export const REVOKE_ACCESS = 'REVOKE_ACCESS';
+export const GRANT_ACCESS = 'GRANT_ACCESS';
+
+export const SET_BACKGROUND = 'SET_BACKGROUND';
+
+export const SET_PROFILE_PICTURE = 'SET_PROFILE_PICTURE';

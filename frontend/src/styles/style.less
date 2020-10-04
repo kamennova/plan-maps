@@ -1,0 +1,299 @@
+@import 'variables';
+@import 'mixins';
+
+body {
+  min-height: 100vh;
+
+  font-family: "Open Sans", Arial, sans-serif;
+  color: black;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  object-fit: cover;
+}
+
+a {
+  text-decoration: none;
+}
+
+.visually-hidden {
+  display: none;
+}
+
+// --- Containers ---
+
+.page-content {
+  padding-top: 30px;
+}
+
+.container {
+  width: 100%;
+  padding: 0 35px;
+}
+
+.smaller-container {
+  width: 980px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.cols-wrapper {
+  display: flex;
+}
+
+.centered-contents {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+// --- Buttons ---
+
+.btn {
+  display: inline-block;
+  padding: 9px 20px 8px;
+
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 13px;
+  color: @primary;
+  font-weight: bold;
+  text-decoration: none;
+  letter-spacing: 0.05em;
+
+  background-color: white;
+  border: 1px solid @btnBorderColor;
+  border-radius: 3px;
+
+  transition: 0.2s linear box-shadow;
+
+  &:hover,
+  &:active,
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    border-color: @primary;
+    box-shadow: 0 0 10px #afd3ff;
+
+    cursor: pointer;
+  }
+}
+
+.btn-brighter {
+  border-color: @primary;
+}
+
+// --- Titles ---
+
+h1,
+h2,
+h3 {
+  font-family: "Open Sans", Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: normal;
+}
+
+.page-title {
+  letter-spacing: 0.02em;
+}
+
+// --- Header ---
+
+.main-header {
+  width: 100%;
+  padding: 0;
+  z-index: 999;
+
+  border-bottom: 1px solid #f2f2f2;
+
+  .container {
+    display: flex;
+    align-items: center;
+    min-height: 45px;
+  }
+}
+
+.site-logo {
+  font-family: Open Sans, Arial, sans-serif;
+  font-size: 16px;
+  color: @primary;
+  font-weight: bold;
+  text-decoration: none;
+  letter-spacing: 0.03em;
+}
+
+.main-nav {
+  margin-left: auto;
+}
+
+.user-links {
+  font-size: 16px;
+
+  .inline();
+  .list-no-style();
+
+  li {
+    margin-right: 30px;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+
+  a:not(.signup-btn) {
+    color: #2d2d2d;
+
+    &:hover {
+      color: @primary;
+    }
+  }
+}
+
+/* =====================
+   FORMS
+====================== */
+
+.form-control {
+  margin: 0 0 13px;
+}
+
+.form-field {
+  padding: 5px 10px;
+
+  letter-spacing: 0.02em;
+
+  border: 1px solid @formFieldBorderColor;
+  border-radius: 3px;
+
+  transition: 0.2s linear border-color;
+
+  &:hover {
+    border-color: lighten(@accent, 10%);
+  }
+
+  &:active,
+  &:focus {
+    border-color: lighten(@accent, 10%);
+    outline: none;
+  }
+}
+
+.field-label {
+  display: inline-block;
+  margin-bottom: 5px;
+
+  font-size: 17px;
+  color: @primary;
+}
+
+/* =====================
+   AUTHORIZATION
+====================== */
+
+.authorization.form-container {
+  width: 240px;
+
+  max-width: 100%;
+  margin: 40px auto 0;
+
+  .page-title {
+    padding-left: 6px;
+  }
+}
+
+.auth-form {
+  width: 100%;
+
+  .field-label {
+    padding-left: 6px;
+  }
+
+  .form-field {
+    width: 100%;
+
+    font-size: 14px;
+  }
+
+  .submit-btn {
+    width: 100%;
+    margin-top: 7px;
+
+    background-color: @btnBorderColor;
+  }
+}
+
+.auth-notification {
+  padding: 10px;
+
+  .notification-title {
+    margin: 0 0 7px;
+
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+  .notification-message {
+    margin: 0;
+
+    font-size: 14px;
+  }
+
+  &.error {
+    background-color: #fff4f4;
+  }
+
+  &.success {
+    background-color: @lightgreen;
+    border-color: green;
+  }
+}
+
+.user-menu {
+  display: flex;
+  align-items: center;
+}
+
+.user-thumbnail {
+  display: inline-block;
+  margin-right: 10px;
+
+  background-color: grey;
+  border-radius: 50%;
+  //background-image: url()
+}
+
+.dropdown-wrapper {
+  position: relative;
+
+  .dropdown-menu {
+    position: absolute;
+    top: 20px;
+
+    display: none;
+    background-color: white;
+    padding: 15px 10px;
+    border: 1px solid @lightgrey;
+
+    list-style: none;
+
+    li:not(:last-of-type) {
+      margin-bottom: 14px;
+    }
+
+    a {
+      color: black;
+      text-decoration: none;
+    }
+  }
+
+  &:hover .dropdown-menu {
+    display: block;
+  }
+}
