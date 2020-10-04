@@ -1,5 +1,7 @@
 [![Build Status](https://travis-ci.com/kamennova/flowcharts.svg?token=K9uLLzxLnW3D39bz7CB1&branch=master)](https://travis-ci.com/kamennova/flowcharts)
 
+Note: this repo is not for development, but for code showcase only.
+
 # Plan Maps
 
 Web service for visualizing plans using tree-like structures. Teamwork with @nikitavbv.
